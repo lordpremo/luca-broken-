@@ -1,0 +1,125 @@
+<!-- filename: index.html -->
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BROKEN LORD Betting Slip Analyzer Pro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="logo">
+        <span class="logo-mark">BL</span>
+        <div class="logo-text-wrap">
+          <span class="logo-text-main">BROKEN LORD</span>
+          <span class="logo-text-sub">Betting Slip Analyzer Pro</span>
+        </div>
+      </div>
+      <a
+        href="https://whatsapp.com/channel/0029Vb7CsEEG8l5M03yjxY08"
+        target="_blank"
+        class="btn channel-btn"
+      >
+        Join WhatsApp Channel
+      </a>
+    </header>
+
+    <main class="app-main">
+      <section class="panel panel-input">
+        <h2>Ingiza Betting Slip Yako</h2>
+        <p class="panel-subtitle">
+          Bandika slip yako hapa chini. Kila mechi iwe kwenye mstari mpya. Odds ziwe mwisho wa mstari.
+          <br />
+          Mfano: <code>Man City vs Arsenal @ 1.65</code>
+        </p>
+
+        <div class="form-group">
+          <label for="slipText">Slip (mechi zako)</label>
+          <textarea
+            id="slipText"
+            rows="8"
+            placeholder="Mfano:
+Man City vs Arsenal @ 1.65
+Real Madrid vs Barcelona @ 2.10
+Yanga vs Simba @ 3.40"
+          ></textarea>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="stake">Stake (TZS)</label>
+            <input type="number" id="stake" placeholder="mf. 5000" min="0" />
+          </div>
+          <div class="form-group">
+            <label for="riskProfile">Risk profile yako</label>
+            <select id="riskProfile">
+              <option value="safe">Safe (napenda uhakika)</option>
+              <option value="balanced">Balanced (kati)</option>
+              <option value="aggressive">Aggressive (napenda odds kubwa)</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="analyzeBtn" class="btn primary">Analyze Slip</button>
+      </section>
+
+      <section class="panel panel-summary">
+        <h2>Muhtasari wa Slip</h2>
+        <div class="summary-grid">
+          <div class="summary-card">
+            <span class="summary-label">Idadi ya mechi</span>
+            <span id="sumMatches" class="summary-value">-</span>
+          </div>
+          <div class="summary-card">
+            <span class="summary-label">Average odds</span>
+            <span id="sumAvgOdds" class="summary-value">-</span>
+          </div>
+          <div class="summary-card">
+            <span class="summary-label">Total odds (makadirio)</span>
+            <span id="sumTotalOdds" class="summary-value">-</span>
+          </div>
+          <div class="summary-card">
+            <span class="summary-label">Potential win (makadirio)</span>
+            <span id="sumPotentialWin" class="summary-value">-</span>
+          </div>
+        </div>
+
+        <div class="score-wrapper">
+          <div class="score-header">
+            <span class="score-title">Confidence Score ya Slip</span>
+            <span id="scoreValue" class="score-number">-</span>
+          </div>
+          <div class="score-bar-bg">
+            <div id="scoreBar" class="score-bar-fill"></div>
+          </div>
+          <p id="scoreNote" class="score-note">
+            Hakuna analysis bado. Bandika slip yako na bonyeza “Analyze Slip”.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel panel-risk">
+        <h2>Risk Analysis ya Mechi</h2>
+        <div id="riskList" class="risk-list empty">
+          <p>Hakuna mechi bado. Bandika slip yako na fanya analysis.</p>
+        </div>
+      </section>
+
+      <section class="panel panel-tips">
+        <h2>Mapendekezo ya Kuboresha Slip</h2>
+        <ul id="tipsList" class="tips-list">
+          <li>Subiri analysis ifanyike ili uone mapendekezo ya slip yako.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <span>© <span id="year"></span> BROKEN LORD • Betting Slip Analyzer Pro • Premium Tool (No Predictions, Just Smart Analysis)</span>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
